@@ -287,7 +287,7 @@ function Test-TrackerName([string]$CookieName) {
 
 $LegacyCookieDir = Join-Path $env:LOCALAPPDATA 'Microsoft\Windows\INetCookies'
 
-$Script:Scratch  = Join-Path $env:TEMP ('CookieJar\' + (Get-Date -Format 'yyyyMMdd_HHmmss'))
+$Script:Scratch  = Join-Path $env:TEMP ('CookieJar\' + (Get-Date -Format 'yyyyMMdd_HHmmss')+ '_' + $PID)
 $Script:PyHelper = $null
 $Script:Sql      = $null
 
